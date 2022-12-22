@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import { Button } from "@material-tailwind/react";
 import profilePic from "../public/basit.jpg";
+import Typewriter from "typewriter-effect";
 
-import { Card, CardHeader, CardBody, CardFooter, Typography } from "@material-tailwind/react";
 // import { Avatar } from "@material-tailwind/react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,37 +18,59 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="relative flex items-center justify-center min-h-screen bg-blue-gray-300 ">
-          <div className="flex-col">
-            <Card className="w-96 h-auto ">
-              <CardHeader
-                color="blue"
-                variant="gradient"
-                className="w-32 h-32 relative rounded-full ring-8 justify-start mx-8"
-              >
+        <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-white py-6 sm:py-12">
+          <div className="relative border-sky-500 bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-3xl sm:border-2 sm:px-10">
+            <div className="flex-col ">
+              <div className="flex items-center">
                 <Image
                   src={profilePic}
-                  alt="img-blur-shadow"
-                  className="rounded-full aspect-square h-32 w-32 "
+                  className="w-40 h-40 object-cover rounded-full basis-0"
+                  alt="Tailwind Play"
                 />
-              </CardHeader>
-              <CardBody className="text-center">
-                <Typography variant="h1" className="mb-2 justify-start text-left">
-                  Basit Anwer
-                </Typography>
-                <Typography>
-                  I love building software products. I am a full stack developer. I also am
-                  passionate about volutneering forthe right causes.
-                </Typography>
-              </CardBody>
-              <CardFooter divider className="flex items-center justify-between py-3">
-                <Typography variant="small">$899/night</Typography>
-                <Typography variant="small" color="gray" className="flex gap-1">
-                  <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
-                  Barcelona, Spain
-                </Typography>
-              </CardFooter>
-            </Card>
+              </div>
+              <div className="divide-y divide-gray-300/50">
+                <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                  <h1 className="text-6xl font-extrabold">Basit Anwer</h1>
+                  <h2 className="text-3xl font-extralight">I love building software products</h2>
+                  <p>
+                    I'm a software engineer and building software products is my jam! Whether it's
+                    for a startup or a big fancy enterprise, I love taking on the challenge of
+                    creating solutions that tackle real-world problems.
+                  </p>
+                  <p>
+                    I have the experience of building
+                    <span className="inline-block mx-1">
+                      <Typewriter
+                        options={{
+                          deleteSpeed: 10,
+                          delay: 100,
+                          strings: [
+                            "BI SaaS products",
+                            "Admin Dashboards",
+                            "Shopify Apps",
+                            "Web Apps",
+                            "Distributed Systems",
+                          ],
+                          autoStart: true,
+                          loop: true,
+                        }}
+                      />
+                    </span>
+                  </p>
+                </div>
+                <div className="pt-8 text-base font-semibold leading-7">
+                  <p className="text-gray-900">Want to dig deeper into Tailwind?</p>
+                  <p>
+                    <a
+                      href="https://tailwindcss.com/docs"
+                      className="text-sky-500 hover:text-sky-600"
+                    >
+                      Read the docs &rarr;
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
