@@ -1,6 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
+import { Button } from "@material-tailwind/react";
+import profilePic from "../public/basit.jpg";
+
+import { Card, CardHeader, CardBody, CardFooter, Typography } from "@material-tailwind/react";
+// import { Avatar } from "@material-tailwind/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +19,39 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <div className="relative flex items-center justify-center min-h-screen bg-blue-gray-300 ">
+          <div className="flex-col">
+            <Card className="w-96 h-auto ">
+              <CardHeader
+                color="blue"
+                variant="gradient"
+                className="w-32 h-32 relative rounded-full ring-8 justify-start mx-8"
+              >
+                <Image
+                  src={profilePic}
+                  alt="img-blur-shadow"
+                  className="rounded-full aspect-square h-32 w-32 "
+                />
+              </CardHeader>
+              <CardBody className="text-center">
+                <Typography variant="h1" className="mb-2 justify-start text-left">
+                  Basit Anwer
+                </Typography>
+                <Typography>
+                  I love building software products. I am a full stack developer. I also am
+                  passionate about volutneering forthe right causes.
+                </Typography>
+              </CardBody>
+              <CardFooter divider className="flex items-center justify-between py-3">
+                <Typography variant="small">$899/night</Typography>
+                <Typography variant="small" color="gray" className="flex gap-1">
+                  <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
+                  Barcelona, Spain
+                </Typography>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
       </main>
     </>
   );
