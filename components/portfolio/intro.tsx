@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Intro() {
   return (
-    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-white py-6 sm:py-12">
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-white py-6 sm:py-12 font-sans font-light text-lg">
       <div className="relative border-sky-500 bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-3xl sm:border-2 sm:px-10">
         <div className="flex-col ">
           <div className="flex items-center">
@@ -20,7 +20,8 @@ export default function Intro() {
             />
           </div>
           <div className="divide-y divide-gray-light">
-            <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+            <div className="space-y-6 py-8 leading-7 text-gray-600">
+              Hi, My name is
               <h1 className="text-6xl font-extrabold">Basit Anwer</h1>
               <RoughNotation
                 type="highlight"
@@ -58,6 +59,7 @@ export default function Intro() {
               </div>
             </div>
             <div className="flex justify-start items-center pt-4">
+              @ me on
               <Link href="https://www.linkedin.com/in/basitanwer/" target={"_blank"} passHref>
                 <Image src={linkedinPic} alt="Linkedin" className="mx-2 saturate-0 w-6 h-6" />
               </Link>
