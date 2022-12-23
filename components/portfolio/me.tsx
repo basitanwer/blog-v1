@@ -25,10 +25,10 @@ let skills = [
     name: "ReactJS",
     icon: "devicon-react-plain",
   },
-  //   {
-  //     name: "TailwindCSS",
-  //     icon: "devicon-tailwindcss-plain",
-  //   },
+  {
+    name: "TailwindCSS",
+    icon: "devicon-tailwindcss-plain",
+  },
   {
     name: "NextJS",
     icon: "devicon-nextjs-plain",
