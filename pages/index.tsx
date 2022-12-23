@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import profilePic from "../public/basit.jpg";
 import Typewriter from "typewriter-effect";
+import { RoughNotation } from "react-rough-notation";
 
 // import { Avatar } from "@material-tailwind/react";
 
@@ -31,13 +32,21 @@ export default function Home() {
               <div className="divide-y divide-gray-300/50">
                 <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
                   <h1 className="text-6xl font-extrabold">Basit Anwer</h1>
-                  <h2 className="text-3xl font-extralight">I love building software products</h2>
-                  <p>
+                  <RoughNotation
+                    type="highlight"
+                    color="#FBF719"
+                    animationDelay={1000}
+                    iterations={1}
+                    show={true}
+                  >
+                    <h2 className="text-3xl font-extralight">I love building software products</h2>
+                  </RoughNotation>
+                  <div>
                     I'm a software engineer and building software products is my jam! Whether it's
                     for a startup or a big fancy enterprise, I love taking on the challenge of
                     creating solutions that tackle real-world problems.
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     I have the experience of building
                     <span className="inline-block mx-1">
                       <Typewriter
@@ -56,7 +65,7 @@ export default function Home() {
                         }}
                       />
                     </span>
-                  </p>
+                  </div>
                 </div>
                 <div className="pt-8 text-base font-semibold leading-7">
                   <p className="text-gray-900">Want to dig deeper into Tailwind?</p>
