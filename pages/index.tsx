@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Intro from "../components/portfolio/intro";
 import Me from "../components/portfolio/me";
+import XP from "../components/portfolio/experience";
 
 // import { Avatar } from "@material-tailwind/react";
 
@@ -24,7 +25,7 @@ export default function Home() {
       <main>
         <Intro />
         <Me />
-        <div className="min-h-screen bg-white"></div>
+        <XP />
       </main>
     </>
   );

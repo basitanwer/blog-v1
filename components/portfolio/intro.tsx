@@ -22,7 +22,7 @@ export default function Intro() {
           <div className="divide-y divide-gray-light">
             <div className="space-y-6 py-8 leading-7 text-gray-600">
               Hi, My name is
-              <h1 className="text-6xl font-extrabold">Basit Anwer</h1>
+              <h1 className="text-6xl font-extrabold text-sky-500">Basit Anwer</h1>
               <RoughNotation
                 type="highlight"
                 color="#FBF719"

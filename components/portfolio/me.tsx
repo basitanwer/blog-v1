@@ -89,8 +89,8 @@ let skills = [
 
 export default function Me() {
   return (
-    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-sky-900 py-6 sm:py-12 text-white font-ligh text-lg">
-      <div className="relative border-white bg-sky-900 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:border-2 sm:px-12">
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-sky-600 py-6 sm:py-12 text-white font-ligh text-lg">
+      <div className="relative border-white bg-sky-600 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:border-2 sm:px-12">
         <div className="flex-col ">
           <div className="divide-y divide-gray-light">
             <div className="space-y-6 py-8 leading-7 text-gray-600 text-justify break-before-avoid">
