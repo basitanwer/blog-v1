@@ -106,7 +106,7 @@ let xp = [
     location: "Pakistan (Islamabad)",
     image: "../../public/capabl.svg",
     companyLink: "https://basitanwer.xyz",
-    date: "2014 - 2016",
+    date: "2013 - 2016",
     description: [
       "Built a Data/ML pipeline that sifts through 100 million tweets & Facebook posts to provide business intelligence reports.",
       "Increased user retention by 2x by engaging customers & updating the dashboard UX.",
@@ -173,7 +173,7 @@ export default function XP() {
                   </Link>
                 </h4>
                 <div className="text-sm ">{item.location}</div>
-                <ul className="pt-4 pl-6 list-disc list-outside text-base">
+                <ul className="pt-4 pl-6 list-disc list-outside text-base text-slate-700">
                   {item.description.map((desc, index) => (
                     <li key={index}>{item.description[index]}</li>
                   ))}

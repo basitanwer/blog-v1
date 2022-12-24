@@ -166,7 +166,7 @@ let impsCerts = Array(8).fill(coursera);
 
 export default function Volunteer() {
   return (
-    <div className="relative flex min-h-screen flex-col justify-center items-center overflow-hidden bg-sky-600 py-6 sm:py-12 font-sans font-light text-lg">
+    <div className="relative flex min-h-screen flex-col justify-center items-center overflow-hidden bg-sky-600 py-6 sm:py-12 font-sans font-light text-lg ">
       <div className="flex base-2 space-x-6 p-8">
         <div className="font-extralight p-2 basis-1/2">
           <div className="w-min mr-auto pl-10">
@@ -205,7 +205,7 @@ export default function Volunteer() {
                   </Link>
                 </h4>
                 <div className="text-sm ">{item.location}</div>
-                <ul className="pt-4 pl-6 list-disc list-outside text-base">
+                <ul className="pt-4 pl-6 list-disc list-outside text-base text-slate-700">
                   {item.description.map((desc, index) => (
                     <li key={index}>{item.description[index]}</li>
                   ))}
@@ -261,7 +261,7 @@ export default function Volunteer() {
                   </Link>
                 </h4>
                 <div className="text-sm ">{item.location}</div>
-                <ul className="pt-4 pl-6 list-disc list-outside text-base">
+                <ul className="pt-4 pl-6 list-disc list-outside text-base text-slate-700">
                   {item.description.map((desc, index) => (
                     <li key={index}>{item.description[index]}</li>
                   ))}
