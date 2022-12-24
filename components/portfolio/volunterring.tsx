@@ -167,47 +167,37 @@ let impsCerts = Array(8).fill(coursera);
 export default function Volunteer() {
   return (
     <div className="relative flex min-h-screen flex-col justify-center items-center overflow-hidden bg-sky-600 py-6 sm:py-12 font-sans font-light text-lg ">
-      <div className="flex base-2 space-x-6 p-8">
-        <div className="font-extralight p-2 basis-1/2">
-          <div className="w-min mr-auto pl-10">
+      <div className="flex-row sm:flex base-2 sm:space-x-6 sm:p-8">
+        <div className="font-extralight p-2 basis-1/2 ">
+          <div className="w-min mr-auto">
             <RoughNotation
               type="highlight"
-              color="yellow"
+              color="#fff36c"
               multiline={true}
               animationDelay={4000}
-              iterations={2}
+              iterations={1}
               show={true}
             >
               <h1 className="text-5xl font-extrabold text-sky-900">Volunteer</h1>
             </RoughNotation>
           </div>
-          <VerticalTimeline layout="1-column-left">
+          <div className="flex-col space-y-2 ">
             {volunteer.map((item, index) => (
-              <VerticalTimelineElement
+              <div
                 key={index}
-                className="drop-shadow-2xl"
-                contentStyle={{ background: "white", color: "black" }}
-                date={item.date}
-                iconStyle={{ background: "#0c4a6e", color: "#fff" }}
-                icon={
-                  <Image
-                    src={imps[index]}
-                    alt="pic"
-                    className="relative rounded-full overflow-hidden"
-                  />
-                }
+                className="border-2 border-white rounded-lg bg-slate-100 pt-2 pl-2 pb-2 mt-4"
               >
-                <h3 className="text-xl font-bold text-sky-900">{item.title}</h3>
-                <h4 className="text-xl font-bold text-slate-500">
+                <div className="font-semibold text-slate-500 ml-2 text-sm ">{item.date}</div>
+                <div className="font-bold text-sky-900 mt-2 ml-2 text-lg">
                   <Link href={item.companyLink} target={"_blank"} passHref>
                     {item.company}
                     <Image src={newTab} alt="opens in new tab" className="w-2 inline -mt-2 mx-1" />
                   </Link>
-                </h4>
-                <div className="text-sm ">{item.location}</div>
+                </div>
+                <div className="font-semibold text-slate-500 ml-2 text-sm ">{item.title}</div>
                 <ul className="pt-4 pl-6 list-disc list-outside text-base text-slate-700">
                   {item.description.map((desc, index) => (
-                    <li key={index}>{item.description[index]}</li>
+                    <li key={index}>{desc}</li>
                   ))}
                 </ul>
                 <div className="flex flex-wrap justify-start gap-2 pt-4 ">
@@ -220,15 +210,15 @@ export default function Volunteer() {
                     </span>
                   ))}
                 </div>
-              </VerticalTimelineElement>
+              </div>
             ))}
-          </VerticalTimeline>
+          </div>
         </div>
-        <div className="font-extralight p-2 basis-1/2">
-          <div className="w-min ml-auto pr-10">
+        <div className="font-extralight p-2 basis-1/2 ">
+          <div className="w-min sm:ml-auto ">
             <RoughNotation
               type="highlight"
-              color="yellow"
+              color="#fff36c"
               multiline={true}
               animationDelay={5000}
               iterations={2}
@@ -237,33 +227,23 @@ export default function Volunteer() {
               <h1 className="text-5xl font-extrabold text-sky-900">Certification</h1>
             </RoughNotation>
           </div>
-          <VerticalTimeline layout="1-column-right">
+          <div className="flex-col space-y-2 ">
             {certs.map((item, index) => (
-              <VerticalTimelineElement
+              <div
                 key={index}
-                className="drop-shadow-2xl"
-                contentStyle={{ background: "white", color: "black" }}
-                date={item.date}
-                iconStyle={{ background: "#0c4a6e", color: "#fff" }}
-                icon={
-                  <Image
-                    src={impsCerts[index]}
-                    alt="pic"
-                    className="relative rounded-full overflow-hidden"
-                  />
-                }
+                className="border-2 border-white rounded-lg bg-slate-100 pt-2 pl-2 pb-2 mt-4"
               >
-                <h3 className="text-xl font-bold text-sky-900">{item.title}</h3>
-                <h4 className="text-xl font-bold text-slate-500">
+                <div className="font-semibold text-slate-500 ml-2 text-sm ">{item.date}</div>
+                <div className="font-bold text-sky-900 mt-2 ml-2 text-lg">
                   <Link href={item.companyLink} target={"_blank"} passHref>
-                    {item.company}
+                    {item.title}
                     <Image src={newTab} alt="opens in new tab" className="w-2 inline -mt-2 mx-1" />
                   </Link>
-                </h4>
-                <div className="text-sm ">{item.location}</div>
+                </div>
+                <div className="font-semibold text-slate-500 ml-2 text-sm ">{item.company}</div>
                 <ul className="pt-4 pl-6 list-disc list-outside text-base text-slate-700">
                   {item.description.map((desc, index) => (
-                    <li key={index}>{item.description[index]}</li>
+                    <li key={index}>{desc}</li>
                   ))}
                 </ul>
                 <div className="flex flex-wrap justify-start gap-2 pt-4 ">
@@ -276,9 +256,9 @@ export default function Volunteer() {
                     </span>
                   ))}
                 </div>
-              </VerticalTimelineElement>
+              </div>
             ))}
-          </VerticalTimeline>
+          </div>
         </div>
       </div>
     </div>

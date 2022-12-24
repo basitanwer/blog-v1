@@ -138,7 +138,7 @@ export default function XP() {
       <div>
         <RoughNotation
           type="highlight"
-          color="yellow"
+          color="#fff36c"
           multiline={true}
           animationDelay={4000}
           iterations={2}
@@ -149,7 +149,7 @@ export default function XP() {
       </div>
       <div className="w-full">
         <div className="font-extralight">
-          <VerticalTimeline layout="2-columns" className=" ">
+          <VerticalTimeline layout="1-column-left" className=" ">
             {xp.map((item, index) => (
               <VerticalTimelineElement
                 key={index}

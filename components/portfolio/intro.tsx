@@ -2,6 +2,7 @@ import Image from "next/image";
 import profilePic from "../../public/basit.jpg";
 import githubPic from "../../public/github.png";
 import linkedinPic from "../../public/linkedin.png";
+import toptal from "../../public/toptal.svg";
 import soPic from "../../public/so.png";
 import Typewriter from "typewriter-effect";
 import { RoughNotation } from "react-rough-notation";
@@ -12,26 +13,29 @@ export default function Intro() {
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-white py-6 sm:py-12 font-sans font-light text-lg">
       <div className="relative border-sky-500 bg-white px-6 pt-10 pb-8 shadow-xl drop-shadow-2xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-3xl sm:border-2 sm:px-10">
         <div className="flex-col ">
-          <div className="flex items-center">
+          <div className="flex items-center grayscale">
             <Image
               src={profilePic}
-              className="w-40 h-40 object-cover rounded-full basis-0"
+              className="w-40 h-40 object-cover rounded-full basis-0 "
               alt="Tailwind Play"
             />
           </div>
           <div className="divide-y divide-gray-light">
             <div className="space-y-6 py-8 leading-7 text-gray-600">
               Hi, My name is
-              <h1 className="text-6xl font-extrabold text-sky-500">Basit Anwer</h1>
-              <RoughNotation
-                type="highlight"
-                color="#FBF719"
-                animationDelay={1000}
-                iterations={1}
-                show={true}
-              >
-                <h2 className="text-3xl font-extralight">I love building software products</h2>
-              </RoughNotation>
+              <h1 className="text-6xl font-extrabold text-sky-500 -ml-1 ">Basit Anwer</h1>
+              <div className="text-3xl font-extralight w-fit ">
+                <RoughNotation
+                  strokeWidth={6}
+                  type="highlight"
+                  color="#fff36c"
+                  animationDelay={1000}
+                  iterations={1}
+                  show={true}
+                >
+                  <div className="">I love building software products</div>
+                </RoughNotation>
+              </div>
               <div>
                 I&rsquo;m a software engineer and building software products is my jam! Whether
                 it&rsquo;s for a startup or a big fancy enterprise, I love taking on the challenge
@@ -72,6 +76,9 @@ export default function Intro() {
                 passHref
               >
                 <Image src={soPic} alt="StackOverflow" className="mx-2 saturate-0 w-6 h-6" />
+              </Link>
+              <Link href="https://www.toptal.com/resume/basit-anwer" target={"_blank"} passHref>
+                <Image src={toptal} alt="Toptal" className="mx-2 saturate-0 w-6 h-6" />
               </Link>
             </div>
           </div>
