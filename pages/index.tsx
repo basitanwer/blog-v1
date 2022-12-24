@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import Intro from "../components/portfolio/intro";
 import Me from "../components/portfolio/me";
 import XP from "../components/portfolio/experience";
+import Volunteer from "../components/portfolio/volunterring";
 
 // import { Avatar } from "@material-tailwind/react";
 
@@ -26,6 +27,7 @@ export default function Home() {
         <Intro />
         <Me />
         <XP />
+        <Volunteer />
       </main>
     </>
   );

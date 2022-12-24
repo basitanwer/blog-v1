@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Intro() {
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-white py-6 sm:py-12 font-sans font-light text-lg">
-      <div className="relative border-sky-500 bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-3xl sm:border-2 sm:px-10">
+      <div className="relative border-sky-500 bg-white px-6 pt-10 pb-8 shadow-xl drop-shadow-2xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-3xl sm:border-2 sm:px-10">
         <div className="flex-col ">
           <div className="flex items-center">
             <Image

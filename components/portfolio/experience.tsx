@@ -137,8 +137,8 @@ export default function XP() {
     <div className="relative flex min-h-screen flex-col justify-center items-center overflow-hidden bg-slate-200 py-6 sm:py-12 font-sans font-light text-lg">
       <div>
         <RoughNotation
-          type="underline"
-          color="gray"
+          type="highlight"
+          color="yellow"
           multiline={true}
           animationDelay={4000}
           iterations={2}
@@ -147,16 +147,16 @@ export default function XP() {
           <h1 className="text-6xl font-extrabold text-sky-900">Experience</h1>
         </RoughNotation>
       </div>
-      <div className="">
+      <div className="w-full">
         <div className="font-extralight">
-          <VerticalTimeline layout="2-columns">
+          <VerticalTimeline layout="2-columns" className=" ">
             {xp.map((item, index) => (
               <VerticalTimelineElement
                 key={index}
-                className=""
+                className="drop-shadow-2xl"
                 contentStyle={{ background: "white", color: "black" }}
                 date={item.date}
-                iconStyle={{ background: "#e0f2fe", color: "#fff" }}
+                iconStyle={{ background: "#0c4a6e", color: "#fff" }}
                 icon={
                   <Image
                     src={imps[index]}
