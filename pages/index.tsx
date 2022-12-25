@@ -4,6 +4,7 @@ import Intro from "../components/portfolio/intro";
 import Me from "../components/portfolio/me";
 import XP from "../components/portfolio/experience";
 import Volunteer from "../components/portfolio/volunterring";
+import Nav from "../components/portfolio/nav";
 
 // import { Avatar } from "@material-tailwind/react";
 
@@ -24,6 +25,7 @@ export default function Home() {
         />
       </Head>
       <main>
+        <Nav />
         <Intro />
         <Me />
         <XP />
