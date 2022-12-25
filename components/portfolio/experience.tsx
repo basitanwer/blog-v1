@@ -153,7 +153,7 @@ export default function XP() {
             {xp.map((item, index) => (
               <VerticalTimelineElement
                 key={index}
-                className="drop-shadow-2xl"
+                className="drop-shadow-md"
                 contentStyle={{ background: "white", color: "black" }}
                 date={item.date}
                 iconStyle={{ background: "#0c4a6e", color: "#fff" }}

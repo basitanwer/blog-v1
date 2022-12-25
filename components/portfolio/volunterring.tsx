@@ -183,10 +183,7 @@ export default function Volunteer() {
           </div>
           <div className="flex-col space-y-4 ">
             {volunteer.map((item, index) => (
-              <div
-                key={index}
-                className="border-2 border-sky-500 rounded-lg bg-white pt-2 pl-2 pb-2 mt-4 shadow-md"
-              >
+              <div key={index} className=" rounded-lg bg-white pt-2 pl-2 pb-2 mt-4 shadow-md">
                 <div className="font-semibold text-slate-500 ml-2 text-sm ">{item.date}</div>
                 <div className="font-bold text-sky-500 mt-2 ml-2 text-lg">
                   <Link href={item.companyLink} target={"_blank"} passHref>
@@ -229,10 +226,7 @@ export default function Volunteer() {
           </div>
           <div className="flex-col space-y-4 ">
             {certs.map((item, index) => (
-              <div
-                key={index}
-                className="border-2 border-sky-500 rounded-lg bg-white pt-2 pl-2 pb-2 mt-4 shadow-md"
-              >
+              <div key={index} className="rounded-lg bg-white pt-2 pl-2 pb-2 mt-4 shadow-md">
                 <div className="font-semibold text-slate-500 ml-2 text-sm ">{item.date}</div>
                 <div className="font-bold text-sky-500 mt-2 ml-2 text-lg">
                   <Link href={item.companyLink} target={"_blank"} passHref>
