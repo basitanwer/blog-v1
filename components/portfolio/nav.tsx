@@ -6,7 +6,7 @@ export default function Nav() {
         <div className="flex ">
           <button
             type="button"
-            className=" w-max text-slate-500 bg-white hover:border-sky-500  rounded-lg hover:shadow-lg font-thin px-5 py-2.5 text-center mr-3 md:mr-0 "
+            className=" w-max text-sky-500 bg-white hover:border-sky-500  rounded-lg hover:shadow-lg font-normal px-5 py-2.5 text-center mr-3 md:mr-0 shadow-md"
           >
             Blog &gt;&gt;
           </button>

@@ -30,6 +30,11 @@ export default function Home() {
         <Me />
         <XP />
         <Volunteer />
+        <div className="bg-sky-500 items-center justify-center flex flex-col text-white font-thin text-sm">
+          <div className="basis-0">Made in NextJS</div>
+          <div className="basis-1">Deployed on Vercel</div>
+          <div className="basis-2">2022</div>
+        </div>
       </main>
     </>
   );

@@ -134,7 +134,7 @@ let imps = [capabl, vectara, lmkr, lmkr, ncache, ss, ncache];
 
 export default function XP() {
   return (
-    <div className="relative flex min-h-screen flex-col justify-center items-center overflow-hidden bg-slate-200 py-6 sm:py-12 font-sans font-light text-lg">
+    <div className="relative flex min-h-screen flex-col justify-center items-center overflow-hidden bg-slate-100 py-6 sm:py-12 font-sans font-light text-lg">
       <div>
         <RoughNotation
           type="highlight"
@@ -165,7 +165,7 @@ export default function XP() {
                   />
                 }
               >
-                <h3 className="text-xl font-bold text-sky-900">{item.title}</h3>
+                <h3 className="text-xl font-bold text-sky-500">{item.title}</h3>
                 <h4 className="text-xl font-bold text-slate-500">
                   <Link href={item.companyLink} target={"_blank"} passHref>
                     {item.company}

@@ -21,7 +21,7 @@ export default function Intro() {
             />
           </div>
           <div className="divide-y divide-gray-light">
-            <div className="space-y-6 py-8 leading-7 text-gray-600">
+            <div className="space-y-6 py-8 leading-7 ">
               Hi, My name is
               <h1 className="text-6xl font-extrabold text-sky-500 -ml-1 ">Basit Anwer</h1>
               <div className="text-3xl font-extralight w-fit ">
