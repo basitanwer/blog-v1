@@ -1,16 +1,12 @@
 import Image from "next/image";
-import profilePic from "../../public/basit.jpg";
+import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
 import capabl from "../../public/capabl.png";
-import vectara from "../../public/vectara.png";
-import newTab from "../../public/newTab.svg";
 import lmkr from "../../public/lmkr.png";
 import ncache from "../../public/ncache.jpeg";
+import newTab from "../../public/newTab.svg";
 import ss from "../../public/ss2.png";
-import linkedinPic from "../../public/linkedin.png";
-import soPic from "../../public/so.png";
-import Typewriter from "typewriter-effect";
-import { RoughNotation } from "react-rough-notation";
-import Link from "next/link";
+import vectara from "../../public/vectara.png";
 
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";

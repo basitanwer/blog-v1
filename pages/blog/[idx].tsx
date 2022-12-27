@@ -14,9 +14,8 @@ require("prismjs/components/prism-jsx");
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-typescript";
-import { RoughNotation } from "react-rough-notation";
-import { getAllPosts, getPostBySlug } from "../../lib/posts";
 import Nav from "../../components/portfolio/nav";
+import { getAllPosts, getPostBySlug } from "../../lib/posts";
 
 export async function getStaticProps({ params }: Params) {
   let post = await getPostBySlug(params.idx);

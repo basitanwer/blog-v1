@@ -1,12 +1,4 @@
-import Image from "next/image";
-import profilePic from "../../public/basit.jpg";
-import githubPic from "../../public/github.png";
-import linkedinPic from "../../public/linkedin.png";
-import soPic from "../../public/so.png";
-import Typewriter from "typewriter-effect";
 import { RoughNotation } from "react-rough-notation";
-import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
 
 let skills = [
   {

@@ -1,12 +1,8 @@
-import Image from "next/image";
-import Nav from "../components/portfolio/nav";
-import fs from "fs";
-import matter from "gray-matter";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-import { remark } from "remark";
-import html from "remark-html";
-import { getAllPosts } from "../lib/posts";
+import Image from "next/image";
 import Link from "next/link";
+import Nav from "../components/portfolio/nav";
+import { getAllPosts } from "../lib/posts";
 
 interface PostData {
   title: string;

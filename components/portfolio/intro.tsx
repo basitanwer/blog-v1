@@ -1,12 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
+import Typewriter from "typewriter-effect";
 import profilePic from "../../public/basit.jpg";
 import githubPic from "../../public/github.png";
 import linkedinPic from "../../public/linkedin.png";
-import toptal from "../../public/toptal.svg";
 import soPic from "../../public/so.png";
-import Typewriter from "typewriter-effect";
-import { RoughNotation } from "react-rough-notation";
-import Link from "next/link";
+import toptal from "../../public/toptal.svg";
 
 export default function Intro() {
   return (

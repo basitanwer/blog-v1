@@ -1,15 +1,14 @@
 import Image from "next/image";
-import icfj from "../../public/icfj.jpeg";
-import hh from "../../public/hh.jpeg";
-import hrcp from "../../public/hrcp.jpeg";
 import cfp from "../../public/cfp.png";
 import coursera from "../../public/coursera.jpeg";
+import hh from "../../public/hh.jpeg";
+import hrcp from "../../public/hrcp.jpeg";
+import icfj from "../../public/icfj.jpeg";
 import newTab from "../../public/newTab.svg";
 
-import { RoughNotation } from "react-rough-notation";
 import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
 
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
 let volunteer = [

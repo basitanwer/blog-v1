@@ -1,10 +1,10 @@
-import Head from "next/head";
 import { Inter } from "@next/font/google";
+import Head from "next/head";
+import XP from "../components/portfolio/experience";
 import Intro from "../components/portfolio/intro";
 import Me from "../components/portfolio/me";
-import XP from "../components/portfolio/experience";
-import Volunteer from "../components/portfolio/volunterring";
 import Nav from "../components/portfolio/nav";
+import Volunteer from "../components/portfolio/volunterring";
 
 // import { Avatar } from "@material-tailwind/react";
 
