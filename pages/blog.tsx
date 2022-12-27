@@ -12,47 +12,7 @@ interface PostData {
   link: string;
 }
 
-// var posts = [
-//   //   {
-//   //     title: "GraphQL vs REST",
-//   //     date: "2021-05-01",
-//   //     description: "GraphQL vs REST is something to test it out",
-//   //     image:
-//   //       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",
-//   //   },
-//   //   {
-//   //     title: "Handling State in React",
-//   //     date: "2021-05-01",
-//   //     description: "Handling State in React is something to test it out",
-//   //     image:
-//   //       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",
-//   //   },
-// ];
 export async function getStaticProps({ params }: Params) {
-  //   let fields = ["title", "date", "slug", "author", "content", "ogImage", "coverImage"];
-  //   const fileContents = fs.readFileSync(
-  //     "_posts/apollgraphql-server-a-complete-tutorial-8e49e44f3b52.md",
-  //     "utf8"
-  //   );
-  //   const matterResult = matter(fileContents);
-
-  //   const processedContent = await remark()
-  //     .use(html, { sanitize: false })
-  //     .process(matterResult.content);
-  //   const contentHtml = processedContent.toString();
-
-  //   type Items = {
-  //     [key: string]: string;
-  //   };
-
-  //   const items: Items = {};
-
-  //   return {
-  //     props: {
-  //       contentHtml,
-  //       ...matterResult.data,
-  //     },
-  //   };
   let p = await getAllPosts();
   let posts: PostData[] = [];
   p.forEach((x) => {
@@ -75,7 +35,7 @@ export async function getStaticProps({ params }: Params) {
 export default function Blog(props: { posts: PostData[] }) {
   props.posts.slice(1);
   return (
-    <section className="bg-neutral-200 h-screen">
+    <section className="bg-neutral-200 h-screen w-screen">
       <Nav href="/" name="About Me"></Nav>
       <div className=" h-[50vh] max-h-96 bg-sky-500 text-white text-5xl flex items-center justify-center">
         <div className="pb-14 font-bold">Personal Blog</div>
