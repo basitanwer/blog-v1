@@ -52,14 +52,13 @@ interface Props {
   title: string;
 }
 
-export default function Gql(props: Props) {
+export default function BlogPost(props: Props) {
   useEffect(() => {
     const highlight = async () => {
       await Prism.highlightAll(); // <--- prepare Prism
     };
     highlight();
   }, []);
-  //   console.log(props.contentHtml);
 
   let md = props.data.coverImage;
   return (
