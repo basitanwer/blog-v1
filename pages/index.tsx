@@ -25,7 +25,7 @@ export default function Home() {
         />
       </Head>
       <main>
-        <Nav />
+        <Nav href="/blog" name="Blog" />
         <Intro />
         <Me />
         <XP />

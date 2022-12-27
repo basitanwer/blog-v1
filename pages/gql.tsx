@@ -1,13 +1,5 @@
-import fs from "fs";
-import Image from "next/image";
-import { join } from "path";
-import matter from "gray-matter";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
-import { remark } from "remark";
-import html from "remark-html";
-import prismjs from "remark-prism";
-import { FunctionComponent } from "react";
-import { ScriptProps } from "next/script";
+import Image from "next/image";
 import { useEffect } from "react";
 
 import Prism from "prismjs";
@@ -19,36 +11,16 @@ require("prismjs/components/prism-css");
 require("prismjs/components/prism-jsx");
 
 // import "prismjs/themes/prism-twilight.css";
-import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-json";
 import "prismjs/components/prism-bash";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-typescript";
 import { RoughNotation } from "react-rough-notation";
+import { getPostBySlug } from "../lib/posts";
 
 export async function getStaticProps({ params }: Params) {
-  let fields = ["title", "date", "slug", "author", "content", "ogImage", "coverImage"];
-  const fileContents = fs.readFileSync(
-    "_posts/apollgraphql-server-a-complete-tutorial-8e49e44f3b52.md",
-    "utf8"
-  );
-  const matterResult = matter(fileContents);
-
-  const processedContent = await remark()
-    .use(prismjs)
-    .use(html, { sanitize: false })
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
-  type Items = {
-    [key: string]: string;
-  };
-
-  const items: Items = {};
-
+  let post = await getPostBySlug("asdf");
   return {
-    props: {
-      contentHtml,
-      ...matterResult.data,
-    },
+    props: post,
   };
 }
 

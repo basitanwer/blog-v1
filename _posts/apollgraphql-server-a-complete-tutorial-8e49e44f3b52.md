@@ -7,7 +7,7 @@ author:
   name: Basit Anwer
   picture: "/public/basit.jpg"
 ogImage:
-  url: https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  url: "https://images.unsplash.com/photo-1607706189992-eae578626c86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
 ---
 
 GraphQL is an excellent tool to have when building APIs and saves a lot of development time when working in a team. The front-end can easily keep up with the changes the back-end engineers are making and keeps the team communication strong.
