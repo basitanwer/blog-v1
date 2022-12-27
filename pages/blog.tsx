@@ -35,14 +35,14 @@ export async function getStaticProps({ params }: Params) {
 export default function Blog(props: { posts: PostData[] }) {
   props.posts.slice(1);
   return (
-    <section className="bg-neutral-200 h-screen w-screen">
+    <section className="bg-neutral-200 h-full w-screen">
       <Nav href="/" name="About Me"></Nav>
       <div className=" h-[50vh] max-h-96 bg-sky-500 text-white text-5xl flex items-center justify-center">
         <div className="pb-14 font-bold">Personal Blog</div>
       </div>
       <div
         id="main-box"
-        className="flex flex-col space-y-10 items-center justify-center shadow-2xl shadow-slate-700/70 border-spacing-2 rounded-lg mb-8  sm:mx-4 -mt-20 z-20 bg-white pt-20 p-4 "
+        className="flex flex-col space-y-10 items-center justify-center shadow-2xl shadow-slate-700/70 border-spacing-2 rounded-lg mb-8  sm:mx-4 -mt-20  bg-white pt-20 p-4 "
       >
         <div id="articles" className="max-w-4xl">
           <Link href={`blog/${props.posts[0].link}`}>

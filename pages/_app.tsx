@@ -14,10 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/b.ico" />
       </Head>
-      <div className="">
-        <Component {...pageProps} />
+      <div className="absolute z-40">
         {Component.name === "Home" ? (
-          <div className="z-20">
+          <div className="bg-transparent">
             <GithubCorner
               direction="left"
               href="https://github.com/basitanwer/blog-v1"
@@ -26,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
             />
           </div>
         ) : (
-          <div className="z-20">
+          <div className="">
             <GithubCorner
               direction="left"
               href="https://github.com/basitanwer/blog-v1"
@@ -35,6 +34,10 @@ export default function App({ Component, pageProps }: AppProps) {
             />
           </div>
         )}
+      </div>
+      <div className="relative">
+        <Component {...pageProps} />
+        {/* <div>asdfasdfasdfasdfas</div> */}
       </div>
     </>
   );

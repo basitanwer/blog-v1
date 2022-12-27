@@ -5,7 +5,7 @@ import Link from "next/link";
  */
 export default function Nav({ href, name }: { href: string; name: string }) {
   return (
-    <nav className="bg-transparent  sm:px-4 py-2.5 bg-fixed w-auto fixed z-20 top-0 left-0 right-0 ">
+    <nav className="fixed bg-transparent  sm:px-4 py-2.5 w-auto top-0 left-0 right-0 z-10">
       {/* <div className="ml-auto w-min"></div> */}
       <div className="container flex flex-wrap  ml-auto w-min ">
         <div className="flex ">
