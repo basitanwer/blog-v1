@@ -4,6 +4,7 @@ import { join } from "path";
 import { remark } from "remark";
 import html from "remark-html";
 import prismjs from "remark-prism";
+import remarkGfm from "remark-gfm";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -26,6 +27,7 @@ export async function getPostBySlug(slug: string, fields: string[] = []): Promis
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
+    .use(remarkGfm)
     .use(prismjs)
     .use(html, { sanitize: false })
     .process(matterResult.content);

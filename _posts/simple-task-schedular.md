@@ -39,7 +39,7 @@ You’ll need a database table with the following columns
 
 Now your pseudo code boils down to these simple steps
 
-```other
+```typescript
 jobs = getJobs(status = `WAITING` && scheduled_time < time.now)
 for job in jobs:
 	success = UPDATE status = 'IN_PROGRESS',
@@ -64,7 +64,7 @@ I like to keep the status as `DONE` instead of deleting the rows right away, it 
 
 We need just another set of code that checks the failed jobs if the application was killed in the process.
 
-```other
+```typescript
 // Reset stale jobs
 jobs = getJobs(status = `IN_PROGRESS`
 				&& start_time - time.now > stale_time )
