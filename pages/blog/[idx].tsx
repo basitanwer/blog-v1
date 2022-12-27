@@ -16,6 +16,7 @@ import "prismjs/components/prism-json";
 import "prismjs/components/prism-typescript";
 import Nav from "../../components/portfolio/nav";
 import { getAllPosts, getPostBySlug } from "../../lib/posts";
+import Head from "next/head";
 
 export async function getStaticProps({ params }: Params) {
   let post = await getPostBySlug(params.idx);
@@ -62,35 +63,40 @@ export default function BlogPost(props: Props) {
 
   let md = props.data.coverImage;
   return (
-    <div>
-      <Nav href="/blog" name="Blog" />
-      <div className="relative  h-[50vh] max-h-96 bg-sky-500 text-white flex justify-center items-center">
-        <Image src={md} alt="cover image" className="object-cover bg-cover" fill />
+    <>
+      <Head>
+        <title>{props.data.title}</title>
+      </Head>
+      <div>
+        <Nav href="/blog" name="Blog" />
+        <div className="relative  h-[50vh] max-h-96 bg-sky-500 text-white flex justify-center items-center">
+          <Image src={md} alt="cover image" className="object-cover bg-cover" fill />
 
-        {/* <div className="flex justify-center items-center">
+          {/* <div className="flex justify-center items-center">
           <div className="text-center bg-blue-400">{props.data.title}</div>
         </div> */}
-        <div className="absolute w-full h-full bg-black/50"></div>
-        <div className="absolute flex flex-col justify-center items-center pb-16">
-          <div className=" text-4xl text-gray-500 font-bold  text-white  text-center bg-transparent ">
-            {props.data.title}
-          </div>
-          <div className=" text-base text-gray-500 font-thin  text-white  text-center bg-transparent">
-            posted by <span className="font-semibold">{props.data.author.name}</span>
+          <div className="absolute w-full h-full bg-black/50"></div>
+          <div className="absolute flex flex-col justify-center items-center pb-16">
+            <div className=" text-4xl text-gray-500 font-bold  text-white  text-center bg-transparent ">
+              {props.data.title}
+            </div>
+            <div className=" text-base text-gray-500 font-thin  text-white  text-center bg-transparent">
+              posted by <span className="font-semibold">{props.data.author.name}</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div
-        id="main-box"
-        className="relative flex flex-col space-y-10 md:items-center justify-center shadow-2xl shadow-slate-700/70 border-spacing-2 rounded-lg mb-8  sm:mx-4 -mt-20  bg-white pt-8 p-4"
-      >
-        <div className="max-w-3xl "></div>
-        <article
-          className="prose prose-slate prose-img:rounded-lg prose-p:font-extralight prose-li:font-extralight  max-w-3xl prose-p:text-black prose-li:text-black"
-          dangerouslySetInnerHTML={{ __html: props.contentHtml }}
-        ></article>
+        <div
+          id="main-box"
+          className="relative flex flex-col space-y-10 md:items-center justify-center shadow-2xl shadow-slate-700/70 border-spacing-2 rounded-lg mb-8  sm:mx-4 -mt-20  bg-white pt-8 p-4"
+        >
+          <div className="max-w-3xl "></div>
+          <article
+            className="prose prose-slate prose-img:rounded-lg prose-p:font-extralight prose-li:font-extralight  max-w-3xl prose-p:text-black prose-li:text-black"
+            dangerouslySetInnerHTML={{ __html: props.contentHtml }}
+          ></article>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
