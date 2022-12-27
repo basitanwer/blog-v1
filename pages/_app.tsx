@@ -7,10 +7,8 @@ import type { AppProps } from "next/app";
 export default function App({ Component, pageProps }: AppProps) {
   console.log(Component.name);
   return (
-    <div>
-      <div className="absolute z-0">
-        <Component {...pageProps} />
-      </div>
+    <div className="">
+      <Component {...pageProps} />
       {Component.name === "Home" ? (
         <div className="z-20">
           <GithubCorner
