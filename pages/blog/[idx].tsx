@@ -69,7 +69,7 @@ export default function BlogPost(props: Props) {
         <title>{props.data.title}</title>
       </Head>
       <div>
-        <GitHubCorner compName={BlogPost.name} />
+        <GitHubCorner bgWhite={true} />
         <Nav href="/blog" name="Blog" />
         <div className="relative  h-[50vh] max-h-96 bg-sky-500 text-white flex justify-center items-center">
           <Image src={md} alt="cover image" className="object-cover bg-cover" fill />

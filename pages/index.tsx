@@ -40,7 +40,7 @@ export default function Home() {
         />
       </Head>
       <main>
-        <GitHubCorner compName={Home.name} />
+        <GitHubCorner bgWhite={false} />
         <Nav href="/blog" name="Blog" />
         <Intro />
         <Me />

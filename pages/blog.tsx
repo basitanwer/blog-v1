@@ -37,7 +37,7 @@ export default function Blog(props: { posts: PostData[] }) {
   props.posts.slice(1);
   return (
     <section className="bg-neutral-200 h-full w-screen">
-      <GitHubCorner compName={Blog.name} />
+      <GitHubCorner bgWhite={true} />
       <Nav href="/" name="About Me"></Nav>
       <div className=" h-[50vh] max-h-96 bg-sky-500 text-white text-5xl flex items-center justify-center">
         <div className="pb-14 font-bold">Personal Blog</div>
