@@ -1,6 +1,7 @@
 import GithubCorner from "react-github-corner";
 
 export default function GitHubCorner({ compName }: { compName: string }) {
+  console.log(compName);
   return (
     <div className="absolute z-40">
       {compName === "Home" ? (
