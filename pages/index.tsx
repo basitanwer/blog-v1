@@ -1,6 +1,7 @@
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import Script from "next/script";
+import GitHubCorner from "../components/githubCorner";
 import XP from "../components/portfolio/experience";
 import Intro from "../components/portfolio/intro";
 import Me from "../components/portfolio/me";
@@ -39,6 +40,7 @@ export default function Home() {
         />
       </Head>
       <main>
+        <GitHubCorner compName={Home.name} />
         <Nav href="/blog" name="Blog" />
         <Intro />
         <Me />

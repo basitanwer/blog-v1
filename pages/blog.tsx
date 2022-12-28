@@ -1,6 +1,7 @@
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 import Link from "next/link";
+import GitHubCorner from "../components/githubCorner";
 import Nav from "../components/portfolio/nav";
 import { getAllPosts } from "../lib/posts";
 
@@ -36,6 +37,7 @@ export default function Blog(props: { posts: PostData[] }) {
   props.posts.slice(1);
   return (
     <section className="bg-neutral-200 h-full w-screen">
+      <GitHubCorner compName={Blog.name} />
       <Nav href="/" name="About Me"></Nav>
       <div className=" h-[50vh] max-h-96 bg-sky-500 text-white text-5xl flex items-center justify-center">
         <div className="pb-14 font-bold">Personal Blog</div>

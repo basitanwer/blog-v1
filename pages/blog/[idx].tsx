@@ -11,12 +11,13 @@ require("prismjs/components/prism-css");
 require("prismjs/components/prism-jsx");
 
 // import "prismjs/themes/prism-twilight.css";
+import Head from "next/head";
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-typescript";
+import GitHubCorner from "../../components/githubCorner";
 import Nav from "../../components/portfolio/nav";
 import { getAllPosts, getPostBySlug } from "../../lib/posts";
-import Head from "next/head";
 
 export async function getStaticProps({ params }: Params) {
   let post = await getPostBySlug(params.idx);
@@ -68,6 +69,7 @@ export default function BlogPost(props: Props) {
         <title>{props.data.title}</title>
       </Head>
       <div>
+        <GitHubCorner compName={BlogPost.name} />
         <Nav href="/blog" name="Blog" />
         <div className="relative  h-[50vh] max-h-96 bg-sky-500 text-white flex justify-center items-center">
           <Image src={md} alt="cover image" className="object-cover bg-cover" fill />
