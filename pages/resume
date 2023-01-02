@@ -1,0 +1,3 @@
+const file = await fs.readFile(`./public/Basit_Anwer.pdf`)
+res.setHeader('Content-Type', 'application/pdf')
+res.send(file)
