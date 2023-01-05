@@ -2,19 +2,19 @@
 # Personal Website 
 
 Built on Next.js and Tailwind for fun but with love. My idea is to expand on this and add more projects to it over time.
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
+## Licence
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
+
+## Deploy on Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbasitanwer%2Fblog-v1)
 
 ## Demo
 
 https://basitanwer.xyz
 
-Deploy on Vercel
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbasitanwer%2Fblog-v1)
 ## Run Locally
 
 Clone the project
